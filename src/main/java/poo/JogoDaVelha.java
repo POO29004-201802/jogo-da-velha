@@ -27,7 +27,15 @@ public class JogoDaVelha {
      * @return 0 quando ninguém ganha, 3 quando jogador 1 ganha, -3 quando jogador 2
      */
     public int ganhou(){
-        return 0;
+
+        if(ganhouHorizontal()==3 || ganhouVertical()==3 || ganhouDiagonal()==3){
+            return 3;
+        }
+        else if(ganhouHorizontal()==-3 || ganhouVertical()==-3 || ganhouDiagonal()==-3){
+            return -3;
+        }
+        else return 0;
+
     }
 
     public int ganhouHorizontal(){
