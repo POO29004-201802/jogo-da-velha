@@ -30,7 +30,19 @@ public class JogoDaVelha {
         return 0;
     }
 
-    public int ganhouHorizontal(){
+    public int ganhouHorizontal() {
+        for (int i = 0; i < 3; i++) {
+            int soma = 0;
+            for (int j = 0; j < 3; j++) {
+                soma = (this.tabuleiro[i][j]) + soma;
+            }
+            if (soma == 3){
+                return soma;
+            }
+            else if(soma == -3){
+                return soma;
+            }
+        }
         return 0;
     }
 
