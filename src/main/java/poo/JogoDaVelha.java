@@ -43,7 +43,23 @@ public class JogoDaVelha {
     }
 
     public boolean jogar(int linha, int coluna){
-       return false;
+        if(linha > 2 || linha < 0){
+            return false;
+        }
+        if(coluna > 2 || coluna < 0){
+            return false;
+        }
+        if(this.tabuleiro[linha][coluna] != 0){
+            return false;
+        }
+
+        if(jogadorDaVez){
+            this.tabuleiro[linha][coluna] = 1;
+        } else{
+            this.tabuleiro[linha][coluna] = -1;
+        }
+        this.jogadorDaVez = !this.jogadorDaVez;
+        return true;
     }
 
     public boolean tabuleiroCheio(){
