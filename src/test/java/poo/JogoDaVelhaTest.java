@@ -17,9 +17,54 @@ public class JogoDaVelhaTest {
 
         jogoDaVelha.setTabuleiro(new int[][]{{1,1,1},{0,0,0},{0,0,0}});
         Assert.assertEquals(3, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,0,0},{1,1,1},{0,0,0}});
+        Assert.assertEquals(3, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,0,0},{0,0,0},{1,1,1}});
+        Assert.assertEquals(3, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{1,0,0},{0,1,0},{0,0,1}});
+        Assert.assertEquals(3, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,0,1},{0,1,0},{1,0,0}});
+        Assert.assertEquals(3, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{1,0,0},{1,0,0},{1,0,0}});
+        Assert.assertEquals(3, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,1,0},{0,1,0},{0,1,0}});
+        Assert.assertEquals(3, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,0,1},{0,0,1},{0,0,1}});
+        Assert.assertEquals(3, jogoDaVelha.ganhou());
 
         jogoDaVelha.setTabuleiro(new int[][]{{-1,-1,-1},{0,0,0},{0,0,0}});
         Assert.assertEquals(-3, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,0,0},{-1,-1,-1},{0,0,0}});
+        Assert.assertEquals(-3, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,0,0},{0,0,0},{-1,-1,-1}});
+        Assert.assertEquals(-3, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{-1,0,0},{0,-1,0},{0,0,-1}});
+        Assert.assertEquals(-3, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,0,-1},{0,-1,0},{-1,0,0}});
+        Assert.assertEquals(-3, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{-1,0,0},{-1,0,0},{-1,0,0}});
+        Assert.assertEquals(-3, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,-1,0},{0,-1,0},{0,-1,0}});
+        Assert.assertEquals(-3, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,0,-1},{0,0,-1},{0,0,-1}});
+        Assert.assertEquals(-3, jogoDaVelha.ganhou());
+
+        jogoDaVelha.setTabuleiro(new int[][]{{-1,1,-1},{0,0,0},{0,0,0}});
+        Assert.assertEquals(0, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,0,0},{-1,1,-1},{0,0,0}});
+        Assert.assertEquals(0, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,0,0},{0,0,0},{1,-1,-1}});
+        Assert.assertEquals(0, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{1,0,0},{0,-1,0},{0,0,-1}});
+        Assert.assertEquals(0, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,0,-1},{0,-1,0},{1,1,0}});
+        Assert.assertEquals(0, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{-1,0,0},{-1,0,0},{1,0,0}});
+        Assert.assertEquals(0, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,1,0},{0,-1,0},{0,-1,0}});
+        Assert.assertEquals(0, jogoDaVelha.ganhou());
+        jogoDaVelha.setTabuleiro(new int[][]{{0,0,1},{0,0,-1},{0,0,-1}});
+        Assert.assertEquals(0, jogoDaVelha.ganhou());
 
 
     }
