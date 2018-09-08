@@ -53,6 +53,23 @@ public class JogoDaVelha {
     }
 
     public int ganhouVertical(){
+
+        /**
+         * percorre coluna, depois linha, realiza a soma individual de cada coluna para averiguar se venceu
+         * @return 3 quando jogador1 ganha, -3 quando jogador2 ganha e zero quando da velha
+         */
+        for (int j = 0; j < 3; j++) {
+            int soma = 0;
+            for (int i = 0; i < 3; i++) {
+                soma = (tabuleiro[i][j]) + soma;
+            }
+            if (soma == 3){
+                return soma;
+            }
+            else if(soma == -3){
+                return soma;
+            }
+        }
         return 0;
     }
 

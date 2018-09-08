@@ -1,7 +1,7 @@
 package poo;
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.*;
 
@@ -95,6 +95,23 @@ public class JogoDaVelhaTest {
 
     @Test
     public void ganhouVertical() {
+        JogoDaVelha jogo = new JogoDaVelha();
+        jogo.setTabuleiro(new int[][]{{1,0,0},{1,0,0},{1,0,0}});
+        Assert.assertEquals(3, jogo.ganhouVertical());
+        jogo.setTabuleiro(new int[][]{{0,1,0},{0,1,0},{0,1,0}});
+        Assert.assertEquals(3, jogo.ganhouVertical());
+        jogo.setTabuleiro(new int[][]{{0,0,1},{0,0,1},{0,0,1}});
+        Assert.assertEquals(3, jogo.ganhouVertical());
+
+        jogo.setTabuleiro(new int[][]{{-1,0,0},{-1,0,0},{-1,0,0}});
+        Assert.assertEquals(-3, jogo.ganhouVertical());
+        jogo.setTabuleiro(new int[][]{{0,-1,0},{0,-1,0},{0,-1,0}});
+        Assert.assertEquals(-3, jogo.ganhouVertical());
+        jogo.setTabuleiro(new int[][]{{0,0,-1},{0,0,-1},{0,0,-1}});
+        Assert.assertEquals(-3, jogo.ganhouVertical());
+
+
+
     }
 
     @Test
